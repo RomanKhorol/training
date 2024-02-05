@@ -4,9 +4,9 @@ for (var i = 0; i < 10; i++) {
   }
   setTimeout(
     (a) => {
-      num(i);
+      num(a);
     },
     0,
-    a
+    i
   );
 }
