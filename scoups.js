@@ -1,3 +1,12 @@
-for (let i = 0; i < 10; i++) {
-  setTimeout((a) => {}, 0);
+for (var i = 0; i < 10; i++) {
+  function num(i) {
+    console.log(i);
+  }
+  setTimeout(
+    (a) => {
+      num(i);
+    },
+    0,
+    a
+  );
 }
