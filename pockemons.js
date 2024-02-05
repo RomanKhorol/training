@@ -28,6 +28,9 @@ const sendReq = (id) => {
     const responce3 = await sendReq(3);
     insertToDOM(responce3);
     console.log(responce3);
+    const responce4 = await sendReq(4);
+    insertToDOM(responce4);
+    console.log(responce4);
   } catch (error) {
     console.log(error);
   }
