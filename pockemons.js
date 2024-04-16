@@ -5,12 +5,22 @@ const insertToDOM = (pokemon) => {
   body.appendChild(image);
 };
 
+// const sendReq = (id) => {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+//         .then((responce) => responce.json())
+//         .then((responce) => res(responce));
+//     }, 2000);
+//   });
+// };
+
 const sendReq = (id) => {
   return new Promise((res, rej) => {
-    setTimeout(() => {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        .then((responce) => responce.json())
-        .then((responce) => res(responce));
+    setTimeout(async () => {
+      const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      const result = resp.json();
+      res(result);
     }, 2000);
   });
 };
